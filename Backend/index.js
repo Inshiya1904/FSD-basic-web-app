@@ -17,5 +17,8 @@ app.use(express.json());
 // Routes
 app.use('/api/applicants', applicantRouter);
 
+app.get('/', (req,res) => {
+    res.send("Hello Backend")
+})
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
