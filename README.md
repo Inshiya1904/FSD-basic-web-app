@@ -1,4 +1,4 @@
-# 🧑‍🎓 Intern Portal 
+# 🧑‍🎓 NGO MERN Stack Project
 
 A full-stack web application that allows users to register as **Interns** or **Volunteers**, and lets admins view submitted applicants.
 
