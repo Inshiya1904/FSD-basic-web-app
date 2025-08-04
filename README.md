@@ -32,7 +32,7 @@ cd FSD-basic-web-app
 
 ```
 
-2. Setup Backend
+### 2. Setup Backend
 
 ```bash
 cd Backend
@@ -41,7 +41,7 @@ npm run dev
 ```
 
 
-3. Setup Frontend
+### 3. Setup Frontend
 
 ```bash
 cd Frontend
