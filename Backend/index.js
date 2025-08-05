@@ -3,6 +3,7 @@ const dotenv = require('dotenv');
 const cors = require('cors');
 const connectDB = require('./config/db');
 const applicantRouter = require('./routes/applicantRoutes');
+const adminRouter = require('./routes/adminRoutes');
 
 
 
@@ -16,6 +17,7 @@ app.use(express.json());
 
 // Routes
 app.use('/api/applicants', applicantRouter);
+app.use('/api/admin', adminRouter);
 
 app.get('/', (req,res) => {
     res.send("Hello Backend")
