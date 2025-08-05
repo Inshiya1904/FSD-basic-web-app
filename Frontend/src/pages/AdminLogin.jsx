@@ -19,8 +19,8 @@ const AdminLogin = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const endpoint = isLogin
-      ? "http://localhost:3000/api/admin/login"
-      : "http://localhost:3000/api/admin/register";
+      ? "https://fsd-basic-web-app.onrender.com/api/admin/login"
+      : "https://fsd-basic-web-app.onrender.com/api/admin/register";
 
     try {
       const { data } = await axios.post(endpoint, form);
