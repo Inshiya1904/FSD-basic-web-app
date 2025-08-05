@@ -2,8 +2,8 @@
 import React, { useContext, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { AuthContext } from "../context/AuthContext.jsx"; // Adjust the path if needed
-import { useAuth } from "../context/AuthContext.jsx";
+import { AuthContext } from "../context/AuthContext.jsx";
+import API from "../service/api.js";
 
 const AdminLogin = () => {
   const [form, setForm] = useState({ email: "", password: "" });
@@ -19,11 +19,11 @@ const AdminLogin = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const endpoint = isLogin
-      ? "https://fsd-basic-web-app.onrender.com/api/admin/login"
-      : "https://fsd-basic-web-app.onrender.com/api/admin/register";
+      ? "/admin/login"
+      : "/admin/register";
 
     try {
-      const { data } = await axios.post(endpoint, form);
+      const { data } = await API.post(endpoint, form);
       if (isLogin) {
         localStorage.setItem("adminToken", data.token); // ✅ Critical line
         login(data.token); // set token globally
